@@ -1,0 +1,11 @@
+/target
+*.whl
+*.so
+*.pyd
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+docs/_build/
+*.egg-info/
+.venv/
