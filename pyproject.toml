@@ -1,0 +1,41 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "sensirion-uart-sensorbridge"
+version = "0.1.0"
+description = "High-performance async and sync SEK-SensorBridge driver and Python bindings"
+readme = "README.md"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Sensirion AG", email = "info@sensirion.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "rust-shdlc-driver>=0.1.0",
+]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: BSD License",
+    "Topic :: System :: Hardware :: Hardware Drivers",
+]
+
+[tool.maturin]
+module-name = "sensirion_uart_sensorbridge._sensirion_uart_sensorbridge"
+features = ["python", "serial", "pyo3/extension-module"]
+python-source = "python"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
