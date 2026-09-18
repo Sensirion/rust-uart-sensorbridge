@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath("../python"))
 
 project = "sensirion-uart-sensorbridge"
 copyright = "2026, Sensirion AG"
@@ -16,7 +12,7 @@ extensions = [
     "sphinx.ext.viewcode",
 ]
 
-templates_path = ["_templates"]
+templates_path = []
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 html_theme = "sphinx_rtd_theme"
